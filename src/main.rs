@@ -5,6 +5,7 @@ fn main() {
 	print_addon();
 }
 fn print_addon() {
+	let mut rng = rand::thread_rng();
 	let addons = vec![
 		"Same pistolety",
 		"Same headshoty",
@@ -56,9 +57,9 @@ fn print_addon() {
 		"30% zycia, brak regeneracji",
 		"Zakaz aim assist",
 	];
-	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
+	let random_addon = addons.choose(&mut rng).unwrap();
 	match random_addon {
-		&"x_items" => println!("Max {} itemow w klasie", rand::thread_rng().gen_range(1,17)),
+		&"x_items" => println!("Max {} itemow w klasie", rng.gen_range(1,17)),
 		&"no_perk" => {
 			println!("Zakaz atutu '{}'", vec![
 				"Waga Lekka",
@@ -67,7 +68,7 @@ fn print_addon() {
 				"Szybkie dlonie", 
 				"Zrecznosc", 
 				"Ekstremalna kondycja"
-			].choose(&mut rand::thread_rng()).unwrap());
+			].choose(&mut rng).unwrap());
 		},
 		&"no_card" => {
 			println!("Zakaz dzikiej karty '{}'", vec![
@@ -79,18 +80,18 @@ fn print_addon() {
 				"Glowny strzelec",
 				"Taktyk",
 				"Niebezpieczne blisko",
-			].choose(&mut rand::thread_rng()).unwrap());
+			].choose(&mut rng).unwrap());
 		},
 		&"health_regen" => {
 			println!("Regeneracja zywotnosci: {}", vec![
 				"Brak",
 				"Wolno",
 				"Szybko"
-			].choose(&mut rand::thread_rng()).unwrap());
+			].choose(&mut rng).unwrap());
 		},
 		&"sens" => {
 			let sensitivities: Vec<u8> = (1..15).collect();
-			println!("Sensitivity (czulosc) {}", sensitivities.choose(&mut rand::thread_rng()).unwrap());
+			println!("Sensitivity (czulosc) {}", sensitivities.choose(&mut rng).unwrap());
 		},
 		_ => println!("{}", random_addon),
 	};
