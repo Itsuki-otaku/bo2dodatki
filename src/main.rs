@@ -49,6 +49,12 @@ fn print_addon() {
 		"Musi byc karabin szturmowy",
 		"Zakaz niszczenia sentry gunow",
 		"Defaultowe klasy",
+		"Nie mozna wchodzic na srodek",
+		"Nie mozna wchodzic do domkow",
+		"Odwrocony widok",
+		"200% zycia",
+		"30% zycia, brak regeneracji",
+		"Zakaz aim assist",
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
 	match random_addon {
