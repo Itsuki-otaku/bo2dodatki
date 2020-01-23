@@ -38,7 +38,6 @@ fn print_addon() {
 		"30% zycia",
 		"Hardcore",
 		"health_regen",
-		"Jedna klasa dla wszystkich",
 		"Stala minimapa",
 		"1 vs 1",
 		"3 ostatnie killstreaki",
@@ -48,6 +47,7 @@ fn print_addon() {
 		"sens",
 		"Brak minimapy",
 		"Musi byc karabin szturmowy",
+		"Zakaz niszczenia sentry gunow",
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
 	match random_addon {
