@@ -48,6 +48,7 @@ fn print_addon() {
 		"Brak minimapy",
 		"Musi byc karabin szturmowy",
 		"Zakaz niszczenia sentry gunow",
+		"Defaultowe klasy",
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
 	match random_addon {
