@@ -52,7 +52,7 @@ fn print_addon() {
 		"Nie mozna wchodzic na srodek",
 		"Nie mozna wchodzic do domkow",
 		"Odwrocony widok",
-		"200% zycia",
+		"200% zycia, szybka regeneracja",
 		"30% zycia, brak regeneracji",
 		"Zakaz aim assist",
 	];
