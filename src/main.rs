@@ -46,35 +46,37 @@ fn print_addon() {
 		"Zakaz jednostki K9",	
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
-	if random_addon == &"x_items" {
-		println!("Max {} itemow w klasie", rand::thread_rng().gen_range(1,17));
-	} else if random_addon == &"no_perk" {
-		println!("Zakaz atutu '{}'", vec![
-			"Waga Lekka",
-			"Wojak", 
-			"Padlinozerca",
-			"Szybkie dlonie", 
-			"Zrecznosc", 
-			"Ekstremalna kondycja"
-		].choose(&mut rand::thread_rng()).unwrap());
-	} else if random_addon == &"no_card" {
-		println!("Zakaz dzikiej karty '{}'", vec![
-			"Atut 1 Chciwosc",
-			"Atut 2 Chciwosc",
-			"Atut 3 Chciwosc",
-			"Przesada",
-			"Dodatkowy strzelec",
-			"Glowny strzelec",
-			"Taktyk",
-			"Niebezpieczne blisko",
-		].choose(&mut rand::thread_rng()).unwrap());
-	} else if random_addon == &"health_regen" {
-		println!("Regeneracja zywotnosci: {}", vec![
-			"Brak",
-			"Wolno",
-			"Szybko"
-		].choose(&mut rand::thread_rng()).unwrap());
-	} else {
-		println!("{}", random_addon);
+	match random_addon {
+		&"x_items" => println!("Max {} itemow w klasie", rand::thread_rng().gen_range(1,17)),
+		&"no_perk" => {
+			println!("Zakaz atutu '{}'", vec![
+				"Waga Lekka",
+				"Wojak", 
+				"Padlinozerca",
+				"Szybkie dlonie", 
+				"Zrecznosc", 
+				"Ekstremalna kondycja"
+			].choose(&mut rand::thread_rng()).unwrap());
+		},
+		&"no_card" => {
+			println!("Zakaz dzikiej karty '{}'", vec![
+				"Atut 1 Chciwosc",
+				"Atut 2 Chciwosc",
+				"Atut 3 Chciwosc",
+				"Przesada",
+				"Dodatkowy strzelec",
+				"Glowny strzelec",
+				"Taktyk",
+				"Niebezpieczne blisko",
+			].choose(&mut rand::thread_rng()).unwrap());
+		},
+		&"health_regen" => {
+			println!("Regeneracja zywotnosci: {}", vec![
+				"Brak",
+				"Wolno",
+				"Szybko"
+			].choose(&mut rand::thread_rng()).unwrap());
+		},
+		_ => println!("{}", random_addon),
 	};
 }
