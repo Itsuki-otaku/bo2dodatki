@@ -44,6 +44,8 @@ fn print_addon() {
 		"3 ostatnie killstreaki",
 		"Zakaz sentry gunow",
 		"Zakaz jednostki K9",	
+		"Gra na samych oknach",
+		"sens",
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
 	match random_addon {
@@ -76,6 +78,10 @@ fn print_addon() {
 				"Wolno",
 				"Szybko"
 			].choose(&mut rand::thread_rng()).unwrap());
+		},
+		&"sens" => {
+			let sensitivities: Vec<u8> = (1..15).collect();
+			println!("Sensitivity (czulosc) {}", sensitivities.choose(&mut rand::thread_rng()).unwrap());
 		},
 		_ => println!("{}", random_addon),
 	};
