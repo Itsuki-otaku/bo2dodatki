@@ -46,6 +46,8 @@ fn print_addon() {
 		"Zakaz jednostki K9",	
 		"Gra na samych oknach",
 		"sens",
+		"Brak minimapy",
+		"Musi byc karabin szturmowy",
 	];
 	let random_addon = addons.choose(&mut rand::thread_rng()).unwrap();
 	match random_addon {
