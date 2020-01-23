@@ -1,10 +1,7 @@
 use rand::seq::SliceRandom;
 use rand::Rng;
 fn main() {
-	println!("Losowy dodatek:");
-	print_addon();
-}
-fn print_addon() {
+	println!("BO2 Losowy dodatek:");
 	let mut rng = rand::thread_rng();
 	let addons = vec![
 		"Same pistolety",
@@ -17,7 +14,6 @@ fn print_addon() {
 		"Zakaz machine gunow",
 		"Same noze",
 		"Robimy sobie klasy",
-		"x_items",
 		"Zakaz dodatkow na broniach",
 		"Zakaz powiekszonego magazynka",
 		"Zakaz niestandardowych celownikow",
@@ -34,18 +30,14 @@ fn print_addon() {
 		"Zakaz ladunkow porazajacych",
 		"Tylko jeden atut",
 		"Tylko jedna dzika karta",
-		"no_perk",
-		"no_card",
 		"30% zycia",
 		"Hardcore",
-		"health_regen",
 		"Stala minimapa",
 		"1 vs 1",
 		"3 ostatnie killstreaki",
 		"Zakaz sentry gunow",
 		"Zakaz jednostki K9",	
 		"Gra na samych oknach",
-		"sens",
 		"Brak minimapy",
 		"Musi byc karabin szturmowy",
 		"Zakaz niszczenia sentry gunow",
@@ -56,6 +48,11 @@ fn print_addon() {
 		"200% zycia, szybka regeneracja",
 		"30% zycia, brak regeneracji",
 		"Zakaz aim assist",
+		"x_items",
+		"no_perk",
+		"no_card",
+		"sens",
+		"health_regen",
 	];
 	let random_addon = addons.choose(&mut rng).unwrap();
 	match random_addon {
