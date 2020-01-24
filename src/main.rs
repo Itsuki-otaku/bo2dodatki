@@ -48,6 +48,7 @@ fn main() {
 		"200% zycia, szybka regeneracja",
 		"30% zycia, brak regeneracji",
 		"Zakaz aim assist",
+		"Przeciwnicy zadają 2 razy więcej DMG",
 		"x_items",
 		"no_perk",
 		"no_card",
